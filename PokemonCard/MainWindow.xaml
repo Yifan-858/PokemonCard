@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PokemonCard"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400">
-    <Grid Margin="20" Background="Beige">
+    <Grid Margin="12" Background="#db9dc4">
         
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> <!--Header-->
@@ -17,47 +17,185 @@
             <RowDefinition Height="Auto"/> <!--Weak/resist/retreat-->
             <RowDefinition Height="Auto"/> <!--Footer-->
         </Grid.RowDefinitions>
-
+        
+        <!--Header-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        
-        <!--Header-->
-        <Border Grid.Row="0" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="Header" HorizontalAlignment="Center"/>
-        </Border>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="3" Margin="9,0,6,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/> <!--Name-->
+                <ColumnDefinition Width="*"/> <!--Space-->
+                <ColumnDefinition Width="auto"/> <!--HP-->
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/><!--icon-->
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="LightGray" Padding="6,0">
+                <TextBlock Text="STAGE 1" TextAlignment="Center" FontSize="8" VerticalAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Column="1" Padding="10,0,0,0" Margin="0" Background="#9f6aa9" CornerRadius="0,0,50,0">
+                <TextBlock Text="Kadabra                              " FontSize="18" FontFamily="Arial" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <Border Grid.Column="2" >
+                
+            </Border>
+            <Border Grid.Column="3">
+                <TextBlock Text="HP" FontWeight="Bold" FontSize="9" Padding="0,0,0,9" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            </Border>
+            <Border Grid.Column="4" Padding="4">
+                <TextBlock Text="80" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Column="5">
+                <Image Source="/Assets/typeicon.png" Width="22"/>
+            </Border>
+        </Grid>
         
         <!--Image-->
-        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <Rectangle Width="200" Height="200" Fill="DarkGray" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="9,0" BorderBrush="LightGray" BorderThickness="2">
+            <Image Source="/Assets/kadabra.png" Width="430"/>
         </Border>
         
         <!--SubInfo-->
-        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="SubInfo" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="2,0" CornerRadius="15,0,15,0" BorderBrush="LightGray" BorderThickness="2" Background="LightGray">
+            <TextBlock Text="NO. 0064 Psi Pokemon HT: WT:" TextAlignment="Center"/>
         </Border>
         
         <!--Move 1-->
-        <Border Grid.Row="3" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="Move 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
+        <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="6,50,6,6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="0" Margin="2,0" Padding="4,0" >
+                <Image Source="/Assets/typeicon.png" Width="22"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1" Margin="2,0" Padding="4,0">
+                <TextBlock Text="Teleportation Attack" FontFamily="Arial" FontWeight="Bold" FontSize="15" TextAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2" Margin="2,0" Padding="4,0">
+                <TextBlock Text="30" FontFamily="Arial" FontWeight="Bold" FontSize="18"  TextAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="2,0" Padding="4,0">
+                <TextBlock Text="Switch this Pokemon with 1 of your Benched Pokemon." TextWrapping="Wrap"/>
+            </Border>
+        </Grid>
         
         <!--Move 2-->
-        <Border Grid.Row="4" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="Move 2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        
-        <!--Weak/Resist/Retreat-->
-        <Border Grid.Row="5" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="Weak/Resist/Retreat" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </Border>
-        
-        <!--Footer-->
-        <Border Grid.Row="6" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="Footer" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </Border>
+        <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
 
+            <Border Grid.Row="0" Grid.Column="0" Margin="2,0" Padding="4,0" >
+                <Image Source="/Assets/typeicon.png" Width="22"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1" Margin="2,0" Padding="4,0" >
+                <TextBlock Text="Psyshot" FontFamily="Arial" FontWeight="Bold" FontSize="15" TextAlignment="Center"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2" Margin="2,0" Padding="4,0" >
+                <TextBlock Text="30" FontFamily="Arial" FontWeight="Bold" FontSize="18" TextAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="2,0" Padding="4,0" >
+                <TextBlock Text="Attack Description" TextWrapping="Wrap"/>
+            </Border>
+        </Grid>
+        
+        <!--Weakness/resistance/retreat-->
+        <Grid Grid.Row="5" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Margin="6,6,0,6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <TextBlock Text="weakness" Padding="5,2"  FontFamily="Arial" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Border Grid.Column="1" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <Image  Source="/Assets/darktype.png" Width="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Border Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,2,1,2">
+                    <TextBlock Text=" x 2" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontSize="10" FontWeight="Bold"/>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="1" Margin="0,6,6,6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <TextBlock Text="resistance" Padding="5,2" FontFamily="Arial" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Border Grid.Column="1" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <Image  Source="/Assets/fighttype.png" Width="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Border Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,2,2,2" CornerRadius="0,0,20,0">
+                    <TextBlock Text="-30" Padding="5,0"  VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontSize="10" FontWeight="Bold"/>
+                </Border>
+            </Grid>
+            <Grid Grid.Column="2" Margin="0,6,6,6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <TextBlock Text="retreat" Padding="5,2" FontFamily="Arial" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Border Grid.Column="1" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <Image  Source="/Assets/normaltype.png" Width="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Border Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,2,0,2">
+                    <TextBlock Text="" Padding="5,0"  VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontSize="10" FontWeight="Bold"/>
+                </Border>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="6" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Margin="2">
+                <TextBlock Text="064/165" FontFamily="Arial" FontSize="9" FontWeight="Bold" FontStyle="Italic"/>
+            </Border>
+            <Border Grid.Column="1" Margin="2,2,70,2">
+                <TextBlock Text="◆" FontFamily="Arial" FontSize="9" FontWeight="Bold" />
+            </Border>
+            <Border Grid.Column="2" HorizontalAlignment="Right">
+                <TextBlock Text="known for its immense telekinetic powers and psychic energy stored in a star on its forehead" FontFamily="Arial" FontSize="9" TextWrapping="Wrap" MaxWidth="250" TextAlignment="Right"/>
+            </Border>
+        </Grid>
+           
     </Grid>
 </Window>
