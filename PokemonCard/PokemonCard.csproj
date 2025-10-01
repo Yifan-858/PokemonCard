@@ -9,11 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\darktype.png" />
+    <None Remove="Assets\fighttype.png" />
     <None Remove="Assets\kadabra.png" />
+    <None Remove="Assets\normaltype.png" />
+    <None Remove="Assets\typeicon.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\darktype.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fighttype.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\kadabra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\normaltype.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\typeicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
