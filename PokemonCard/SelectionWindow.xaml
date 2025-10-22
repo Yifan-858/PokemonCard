@@ -1,0 +1,17 @@
+﻿<Window x:Class="PokemonCard.SelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonCard"
+        mc:Ignorable="d"
+        Title="SelectionWindow" Height="450" Width="800">
+    <StackPanel Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Pick a Pokemon" FontSize="16" HorizontalAlignment="Center" />
+        <StackPanel Orientation="Vertical" Width="200">
+            <Button x:Name="KadabraButton" Content="Kadabra" Margin="1" Click="Choose_Click"/>
+            <Button x:Name="SquirtleButton" Content="Squirtle" Margin="1" Click="Choose_Click"/>
+            <Button x:Name="CharmanderButton" Content="Charmander" Margin="1" Click="Choose_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
